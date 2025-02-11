@@ -1,5 +1,5 @@
-provider "aws" {
-  region = "ap-south-1"
+provider "aws"{
+region = "ap-south-1"
 }
 
 # VPC
@@ -95,7 +95,7 @@ resource "aws_security_group" "instance_sg" {
 
 # EC2 Instance
 resource "aws_instance" "web_server" {
-  ami             = "ami-0c3fd0f5d33134a76" # Ubuntu 22.04 LTS (ap-south-1)
+  ami             = "ami-0c50b6f7dc3701ddd" # Ubuntu 22.04 LTS (ap-south-1)
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.public_subnet.id
   security_groups = [aws_security_group.instance_sg.name]
